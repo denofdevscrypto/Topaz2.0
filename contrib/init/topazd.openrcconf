@@ -1,0 +1,33 @@
+# /etc/conf.d/topazd: config file for /etc/init.d/topazd
+
+# Config file location
+#TOPAZD_CONFIGFILE="/etc/topaz/topaz.conf"
+
+# What directory to write pidfile to?  (created and owned by $TOPAZD_USER)
+#TOPAZD_PIDDIR="/var/run/topazd"
+
+# What filename to give the pidfile
+#TOPAZD_PIDFILE="${TOPAZD_PIDDIR}/topazd.pid"
+
+# Where to write topazd data (be mindful that the blockchain is large)
+#TOPAZD_DATADIR="/var/lib/topazd"
+
+# User and group to own topazd process
+#TOPAZD_USER="topaz"
+#TOPAZD_GROUP="topaz"
+
+# Path to topazd executable
+#TOPAZD_BIN="/usr/bin/topazd"
+
+# Nice value to run topazd under
+#TOPAZD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#TOPAZD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for topazd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+TOPAZD_SIGTERM_TIMEOUT=60
